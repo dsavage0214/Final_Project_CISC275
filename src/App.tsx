@@ -4,6 +4,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import HomeScreen from "./Pages/HomeScreen";
 import DetailedTestScreen from "./Pages/DetailedTest";
 import BasicTestScreen from "./Pages/BasicTest";
+import { NavB } from "./Pages/NavBar";
 
 
 function App() {

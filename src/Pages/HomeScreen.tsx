@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Button, Form} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../CSS/HomeScreen.css";
+import { NavB } from "./NavBar";
 
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -18,14 +19,7 @@ function Header() {
      * JSX element that renders a header that appears at the top of all pages.
      */
     return (
-    <header className="container">
-      <div className="header">
-        <Link to="/">Home</Link>
-        <Link to="/">News</Link>
-        <Link to="/">Contact</Link>
-        <Link to="/">About</Link>
-      </div>
-    </header>
+   <NavB></NavB>
   );
 }
 
