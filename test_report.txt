@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (51 ms)
+  ✕ renders learn react link (54 ms)
 
   ● renders learn react link
 
@@ -16,34 +16,37 @@ FAIL src/App.test.tsx
           [33mclass[39m=[32m"App"[39m
         [36m>[39m
           [36m<div>[39m
-            [36m<header[39m
-              [33mclass[39m=[32m"container"[39m
+            [36m<nav[39m
+              [33mclass[39m=[32m"navbar navbar-expand navbar-dark bg-primary"[39m
             [36m>[39m
               [36m<div[39m
-                [33mclass[39m=[32m"header"[39m
+                [33mclass[39m=[32m"p-0 container-fluid"[39m
+                [33mstyle[39m=[32m"padding-top: 20px; padding-left: 20px; padding-right: 20px;"[39m
               [36m>[39m
                 [36m<a[39m
+                  [33mclass[39m=[32m"navbar-brand"[39m
                   [33mhref[39m=[32m"#/"[39m
                 [36m>[39m
-                  [0mHome[0m
+                  [0mNavbar[0m
                 [36m</a>[39m
-                [36m<a[39m
-                  [33mhref[39m=[32m"#/"[39m
+                [36m<div[39m
+                  [33mclass[39m=[32m"ms-auto navbar-nav"[39m
                 [36m>[39m
-                  [0mNews[0m
-                [36m</a>[39m
-                [36m<a[39m
-                  [33mhref[39m=[32m"#/"[39m
-                [36m>[39m
-                  [0mContact[0m
-                [36m</a>[39m
-                [36m<a[39m
-                  [33mhref[39m=[32m"#/"[39m
-                [36m>[39m
-                  [0mAbout[0m
-                [36m</a>[39m
+                  [36m<a[39m
+                    [33mclass[39m=[32m"nav-link"[39m
+                    [33mhref[39m=[32m"#/basic-test"[39m
+                  [36m>[39m
+                    [0mBasic Test[0m
+                  [36m</a>[39m
+                  [36m<a[39m
+                    [33mclass[39m=[32m"nav-link"[39m
+                    [33mhref[39m=[32m"#/detailed-test"[39m
+                  [36m>[39m
+                    [0mDetailed Test[0m
+                  [36m</a>[39m
+                [36m</div>[39m
               [36m</div>[39m
-            [36m</header>[39m
+            [36m</nav>[39m
             [36m<div[39m
               [33mclass[39m=[32m"Home-body"[39m
             [36m>[39m
@@ -125,22 +128,23 @@ FAIL src/App.test.tsx
 ---------------------|---------|----------|---------|---------|-------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------|---------|----------|---------|---------|-------------------
-All files            |   26.47 |    16.66 |   30.76 |   26.47 |                   
+All files            |   30.55 |    16.66 |   35.71 |   30.55 |                   
  src                 |    8.33 |        0 |   33.33 |    8.33 |                   
   App.tsx            |     100 |      100 |     100 |     100 |                   
   index.tsx          |       0 |      100 |     100 |       0 | 8-20              
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- src/Components      |       0 |      100 |       0 |       0 |                   
+ src/Components      |      50 |      100 |      50 |      50 |                   
+  navBar.tsx         |     100 |      100 |     100 |     100 |                   
   progress.tsx       |       0 |      100 |       0 |       0 | 16-18             
  src/Pages           |      40 |       50 |   33.33 |      40 |                   
   BasicTest.tsx      |       0 |      100 |       0 |       0 | 9-17              
   DetailedTest.tsx   |       0 |      100 |       0 |       0 | 8-16              
-  HomeScreen.tsx     |   66.66 |       50 |      60 |   66.66 | 12,57-63          
+  HomeScreen.tsx     |   66.66 |       50 |      60 |   66.66 | 13,51-57          
 ---------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.822 s
+Time:        2.853 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
