@@ -1339,7 +1339,12 @@
     
         at LinkWithRef (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-router-dom/index.tsx:924:7)
         at div
-        at TestBlurb (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/Pages/HomeScreen.tsx:9:21)
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/CardBody.js:14:3
+        at div
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/Card.js:23:3
+        at div
+        at BasicTest
+        at div
         at div
         at div
         at HomeScreen
@@ -1383,7 +1388,12 @@
     
         at LinkWithRef (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-router-dom/index.tsx:924:7)
         at div
-        at TestBlurb (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/Pages/HomeScreen.tsx:9:21)
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/CardBody.js:14:3
+        at div
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/Card.js:23:3
+        at div
+        at DetailedTest
+        at div
         at div
         at div
         at HomeScreen
@@ -2759,7 +2769,12 @@
     
         at LinkWithRef (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-router-dom/index.tsx:924:7)
         at div
-        at TestBlurb (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/Pages/HomeScreen.tsx:9:21)
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/CardBody.js:14:3
+        at div
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/Card.js:23:3
+        at div
+        at BasicTest
+        at div
         at div
         at div
         at HomeScreen
@@ -2803,7 +2818,12 @@
     
         at LinkWithRef (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-router-dom/index.tsx:924:7)
         at div
-        at TestBlurb (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/Pages/HomeScreen.tsx:9:21)
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/CardBody.js:14:3
+        at div
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/Card.js:23:3
+        at div
+        at DetailedTest
+        at div
         at div
         at div
         at HomeScreen
@@ -4179,7 +4199,12 @@
     
         at LinkWithRef (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-router-dom/index.tsx:924:7)
         at div
-        at TestBlurb (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/Pages/HomeScreen.tsx:9:21)
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/CardBody.js:14:3
+        at div
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/Card.js:23:3
+        at div
+        at BasicTest
+        at div
         at div
         at div
         at HomeScreen
@@ -4223,7 +4248,12 @@
     
         at LinkWithRef (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-router-dom/index.tsx:924:7)
         at div
-        at TestBlurb (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/Pages/HomeScreen.tsx:9:21)
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/CardBody.js:14:3
+        at div
+        at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/react-bootstrap/cjs/Card.js:23:3
+        at div
+        at DetailedTest
+        at div
         at div
         at div
         at HomeScreen
@@ -4264,16 +4294,16 @@
 
 FAIL src/App.test.tsx
   NavB component
-    ✓ renders Navbar with correct branding (36 ms)
-    ✓ renders navigation links (7 ms)
+    ✓ renders Navbar with correct branding (35 ms)
+    ✓ renders navigation links (8 ms)
   FinishScreen component
-    ✓ renders congratulations message (8 ms)
+    ✓ renders congratulations message (5 ms)
     ✓ renders "Take me to the results" button (4 ms)
-    ✓ renders "Let me review my answers" button (3 ms)
+    ✓ renders "Let me review my answers" button (4 ms)
   HomeScreen component
-    ✕ renders basic test blurb (204 ms)
-    ✕ renders detailed test blurb (84 ms)
-    ✕ inputting API key and clicking submit button calls handleSubmit (64 ms)
+    ✕ renders basic test blurb (222 ms)
+    ✕ renders detailed test blurb (77 ms)
+    ✕ inputting API key and clicking submit button calls handleSubmit (75 ms)
 
   ● HomeScreen component › renders basic test blurb
 
@@ -4386,27 +4416,31 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
----------------------|---------|----------|---------|---------|-------------------
-File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
----------------------|---------|----------|---------|---------|-------------------
-All files            |   12.04 |        0 |   13.88 |   12.98 |                   
- src                 |       0 |        0 |       0 |       0 |                   
-  App.tsx            |       0 |      100 |       0 |       0 | 15                
-  index.tsx          |       0 |      100 |     100 |       0 | 8-20              
-  reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- src/Components      |   30.76 |        0 |      20 |      32 |                   
-  Footer.tsx         |   36.36 |        0 |      25 |      40 | 13-16,23-28       
-  Question.tsx       |       0 |        0 |       0 |       0 | 17-56             
-  navBar.tsx         |     100 |      100 |     100 |     100 |                   
-  progress.tsx       |   33.33 |      100 |      25 |   33.33 | 11-13,46-49       
- src/Pages           |    4.44 |        0 |   11.11 |       5 |                   
-  BasicTest.tsx      |       0 |        0 |       0 |       0 | 9-116             
-  DetailedTest.tsx   |       0 |        0 |       0 |       0 | 8-75              
-  HomeScreen.tsx     |     100 |      100 |     100 |     100 |                   
-  ResultPage.tsx     |       0 |        0 |       0 |       0 | 7-130             
----------------------|---------|----------|---------|---------|-------------------
+-----------------------|---------|----------|---------|---------|-------------------
+File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-----------------------|---------|----------|---------|---------|-------------------
+All files              |   13.48 |        0 |   15.38 |   14.28 |                   
+ src                   |       0 |        0 |       0 |       0 |                   
+  App.tsx              |       0 |      100 |       0 |       0 | 16                
+  index.tsx            |       0 |      100 |     100 |       0 | 8-20              
+  reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10              
+ src/Components        |   36.66 |        0 |   27.77 |   37.93 |                   
+  BasicTestCard.tsx    |     100 |      100 |     100 |     100 |                   
+  DetailedTestCard.tsx |     100 |      100 |     100 |     100 |                   
+  Footer.tsx           |   36.36 |        0 |      25 |      40 | 13-16,23-28       
+  Loading.tsx          |       0 |      100 |       0 |       0 | 5                 
+  Question.tsx         |       0 |        0 |       0 |       0 | 17-56             
+  navBar.tsx           |     100 |      100 |     100 |     100 |                   
+  progress.tsx         |   33.33 |      100 |      25 |   33.33 | 11-13,46-49       
+ src/Pages             |    2.12 |        0 |    5.55 |    2.32 |                   
+  BasicTest.tsx        |       0 |        0 |       0 |       0 | 9-116             
+  DetailedTest.tsx     |       0 |        0 |       0 |       0 | 8-75              
+  HomeScreen.tsx       |     100 |      100 |     100 |     100 |                   
+  LoadingPage.tsx      |       0 |      100 |       0 |       0 | 5                 
+  ResultPage.tsx       |       0 |        0 |       0 |       0 | 8-153             
+-----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       3 failed, 5 passed, 8 total
 Snapshots:   0 total
-Time:        3.676 s
+Time:        3.809 s
 Ran all test suites.
