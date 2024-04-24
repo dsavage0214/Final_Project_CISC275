@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { find_key } from "../Components/Footer";
 import OpenAI from 'openai';
 import "../CSS/ReportScreen.css"
-import {Accordion} from "react-bootstrap";
+import { Accordion } from "react-bootstrap";
+import loadingSpinner from "../Assets/spinner.gif";
 
 let apiKey: string | undefined = find_key();
 
@@ -95,7 +96,7 @@ export default function ResultPage():React.JSX.Element {
                     },
                     {
                         "role": "user",
-                        "content": "For each career suggested, could you write a short paragraph explaining what that job would entail? " +
+                        "content": "For each career suggested, could you write 3 sentences explaining what that job would entail? " +
                             "Please make the JSON key for each description \"description\""
                     },
                     {
@@ -115,22 +116,34 @@ export default function ResultPage():React.JSX.Element {
                             "someone in that field? Please make the JSON key for each explanation \"orgs\""
                     }
                 ],
-                max_tokens: 4000, // was able to generate pretty good results in the playground with this length
+                max_tokens: 3000, // was able to generate pretty good results in the playground with this length
                 response_format: {type: "json_object"} // will probably be easier to handle than a string
             })
-            console.log("GPT finished due to: " + report.choices[0].finish_reason) // to see if GPT needs more tokens
-            if (report.choices[0].message.content !== null) {setReport(JSON.parse(report.choices[0].message.content))}
+            console.log("GPT finished due to: " + report.choices[0].finish_reason) // to see if GPT needs more tokens or anything like that
+            if (report.choices[0].message.content !== null) {
+                setIsLoading(false);
+                setReport(JSON.parse(report.choices[0].message.content));
+            }
             else {await gen_report()} // the message is null, API call failed and needs to be done again
         }
         gen_report()
     }, []);
     const [report, setReport] = useState<rootJson>();
+    const [isLoading, setIsLoading] = useState(true);
 
 
-    return ( // We'll likely need a way to show that the API call is loading, rn it looks like the site doesn't work until the accordion shows up
+    return (
         <div className={"placeholder-container"}>
             <h2>Test Completed!</h2>
-            <ResultAccordion GPTReport={report}/>
+            {
+                isLoading?
+                    <div>
+                        <img src={loadingSpinner} style={{height: "15vh", width: "15vw"}} alt="loading spinner"/>
+                        <h3>Loading...</h3>
+                    </div>
+                    :
+                    <ResultAccordion GPTReport={report}/>
+            }
         </div>
     );
 }
