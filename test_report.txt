@@ -4294,16 +4294,16 @@
 
 FAIL src/App.test.tsx
   NavB component
-    ✓ renders Navbar with correct branding (36 ms)
+    ✓ renders Navbar with correct branding (35 ms)
     ✓ renders navigation links (7 ms)
   FinishScreen component
     ✓ renders congratulations message (6 ms)
     ✓ renders "Take me to the results" button (3 ms)
-    ✓ renders "Let me review my answers" button (3 ms)
+    ✓ renders "Let me review my answers" button (4 ms)
   HomeScreen component
-    ✕ renders basic test blurb (235 ms)
-    ✕ renders detailed test blurb (79 ms)
-    ✕ inputting API key and clicking submit button calls handleSubmit (86 ms)
+    ✕ renders basic test blurb (224 ms)
+    ✕ renders detailed test blurb (73 ms)
+    ✕ inputting API key and clicking submit button calls handleSubmit (83 ms)
 
   ● HomeScreen component › renders basic test blurb
 
@@ -4429,9 +4429,9 @@ All files              |   13.48 |        0 |   15.38 |   14.28 |
   DetailedTestCard.tsx |     100 |      100 |     100 |     100 |                   
   Footer.tsx           |   36.36 |        0 |      25 |      40 | 13-16,23-28       
   Loading.tsx          |       0 |      100 |       0 |       0 | 5                 
-  Question.tsx         |       0 |        0 |       0 |       0 | 17-56             
+  Question.tsx         |       0 |        0 |       0 |       0 | 24-63             
   navBar.tsx           |     100 |      100 |     100 |     100 |                   
-  progress.tsx         |   33.33 |      100 |      25 |   33.33 | 11-13,46-49       
+  progress.tsx         |   33.33 |      100 |      25 |   33.33 | 12-14,47-50       
  src/Pages             |    2.12 |        0 |    5.55 |    2.32 |                   
   BasicTest.tsx        |       0 |        0 |       0 |       0 | 9-116             
   DetailedTest.tsx     |       0 |        0 |       0 |       0 | 8-75              
@@ -4442,5 +4442,5 @@ All files              |   13.48 |        0 |   15.38 |   14.28 |
 Test Suites: 1 failed, 1 total
 Tests:       3 failed, 5 passed, 8 total
 Snapshots:   0 total
-Time:        3.813 s
+Time:        3.852 s
 Ran all test suites.
