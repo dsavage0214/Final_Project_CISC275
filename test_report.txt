@@ -22,7 +22,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -65,7 +65,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -86,13 +86,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -113,7 +113,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -139,7 +139,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -182,7 +182,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -203,13 +203,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -230,7 +230,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -256,7 +256,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -299,7 +299,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -320,13 +320,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -347,7 +347,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -373,7 +373,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -416,7 +416,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -437,13 +437,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -464,7 +464,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -490,7 +490,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -533,7 +533,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -554,13 +554,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -581,7 +581,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -608,7 +608,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -652,7 +652,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -673,13 +673,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -701,7 +701,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -728,7 +728,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -772,7 +772,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -793,13 +793,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -821,7 +821,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -848,7 +848,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -892,7 +892,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -913,13 +913,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -941,7 +941,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -968,7 +968,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1012,7 +1012,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1033,13 +1033,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -1061,7 +1061,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1088,7 +1088,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1132,7 +1132,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:80:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:88:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1153,13 +1153,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -1181,7 +1181,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1203,13 +1203,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -1228,7 +1228,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1253,13 +1253,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -1278,7 +1278,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1303,13 +1303,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -1328,7 +1328,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1352,13 +1352,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -1377,7 +1377,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1401,13 +1401,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -1426,7 +1426,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1452,7 +1452,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1495,7 +1495,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1516,13 +1516,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -1543,7 +1543,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1569,7 +1569,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1612,7 +1612,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1633,13 +1633,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -1660,7 +1660,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1686,7 +1686,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1729,7 +1729,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1750,13 +1750,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -1777,7 +1777,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1803,7 +1803,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1846,7 +1846,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1867,13 +1867,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -1894,7 +1894,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -1920,7 +1920,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1963,7 +1963,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -1984,13 +1984,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -2011,7 +2011,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2038,7 +2038,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2082,7 +2082,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2103,13 +2103,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -2131,7 +2131,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2158,7 +2158,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2202,7 +2202,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2223,13 +2223,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -2251,7 +2251,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2278,7 +2278,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2322,7 +2322,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2343,13 +2343,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -2371,7 +2371,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2398,7 +2398,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2442,7 +2442,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2463,13 +2463,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -2491,7 +2491,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2518,7 +2518,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2562,7 +2562,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:91:33)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:99:33)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2583,13 +2583,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -2611,7 +2611,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2633,13 +2633,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -2658,7 +2658,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2683,13 +2683,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -2708,7 +2708,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2733,13 +2733,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -2758,7 +2758,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2782,13 +2782,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -2807,7 +2807,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2831,13 +2831,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -2856,7 +2856,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2882,7 +2882,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2925,7 +2925,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -2946,13 +2946,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -2973,7 +2973,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -2999,7 +2999,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3042,7 +3042,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3063,13 +3063,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -3090,7 +3090,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -3116,7 +3116,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3159,7 +3159,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3180,13 +3180,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -3207,7 +3207,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -3233,7 +3233,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3276,7 +3276,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3297,13 +3297,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -3324,7 +3324,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -3350,7 +3350,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3393,7 +3393,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3414,13 +3414,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -3441,7 +3441,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -3468,7 +3468,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3512,7 +3512,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3533,13 +3533,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -3561,7 +3561,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -3588,7 +3588,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3632,7 +3632,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3653,13 +3653,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -3681,7 +3681,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -3708,7 +3708,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3752,7 +3752,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3773,13 +3773,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -3801,7 +3801,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -3828,7 +3828,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3872,7 +3872,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3893,13 +3893,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -3921,7 +3921,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -3948,7 +3948,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -3992,7 +3992,7 @@
         at /home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/act-compat.js:63:25
         at renderRoot (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:159:26)
         at render (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@testing-library/react/dist/pure.js:246:10)
-        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:102:55)
+        at Object.<anonymous> (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/src/App.test.tsx:110:55)
         at Promise.then.completed (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-circus/build/utils.js:316:10)
@@ -4013,13 +4013,13 @@
         at runCLI (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/Final_Project_CISC275/Final_Project_CISC275/node_modules/jest-cli/build/cli/index.js:155:37)
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
       at reportException (node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:70:28)
@@ -4041,7 +4041,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -4063,13 +4063,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -4088,7 +4088,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -4113,13 +4113,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -4138,7 +4138,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -4163,13 +4163,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -4188,7 +4188,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -4212,13 +4212,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -4237,7 +4237,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -4261,13 +4261,13 @@
     Consider adding an error boundary to your tree to customize error handling behavior.
     Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at logCapturedError (node_modules/react-dom/cjs/react-dom.development.js:18687:23)
       at update.callback (node_modules/react-dom/cjs/react-dom.development.js:18720:5)
@@ -4286,7 +4286,7 @@
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -4294,28 +4294,28 @@
 
 FAIL src/App.test.tsx
   NavB component
-    ✓ renders Navbar with correct branding (38 ms)
+    ✓ renders Navbar with correct branding (36 ms)
     ✓ renders navigation links (8 ms)
   FinishScreen component
-    ✓ renders congratulations message (6 ms)
-    ✓ renders "Take me to the results" button (5 ms)
+    ✓ renders congratulations message (5 ms)
+    ✓ renders "Take me to the results" button (4 ms)
     ✓ renders "Let me review my answers" button (4 ms)
   HomeScreen component
-    ✕ renders basic test blurb (228 ms)
-    ✕ renders detailed test blurb (74 ms)
-    ✕ inputting API key and clicking submit button calls handleSubmit (83 ms)
+    ✕ renders basic test blurb (256 ms)
+    ✕ renders detailed test blurb (79 ms)
+    ✕ inputting API key and clicking submit button calls handleSubmit (73 ms)
 
   ● HomeScreen component › renders basic test blurb
 
     TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.
 
-      78 |   // Test to check if basic test blurb renders
-      79 |   test("renders basic test blurb", () => {
-    > 80 |     const { getByText } = render(<HomeScreen />);
+      86 |   // Test to check if basic test blurb renders
+      87 |   test("renders basic test blurb", () => {
+    > 88 |     const { getByText } = render(<HomeScreen />);
          |                                 ^
-      81 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-      82 |     const basicTestText = getByText(
-      83 |       /Concerned about the path of your career\?/i
+      89 |     const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
+      90 |     const basicTestText = getByText(
+      91 |       /Concerned about the path of your career\?/i
 
       at LinkWithRef (node_modules/react-router-dom/index.tsx:937:11)
       at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:16305:18)
@@ -4332,7 +4332,7 @@ FAIL src/App.test.tsx
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:80:33)
+      at Object.<anonymous> (src/App.test.tsx:88:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -4342,13 +4342,13 @@ FAIL src/App.test.tsx
 
     TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.
 
-      89 |   // Test to check if detailed test blurb renders
-      90 |   test("renders detailed test blurb", () => {
-    > 91 |     const { getByText } = render(<HomeScreen />);
-         |                                 ^
-      92 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-      93 |     const detailedTestText = getByText(
-      94 |       /Looking to dive deep into your career options\?/i
+       97 |   // Test to check if detailed test blurb renders
+       98 |   test("renders detailed test blurb", () => {
+    >  99 |     const { getByText } = render(<HomeScreen />);
+          |                                 ^
+      100 |     const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
+      101 |     const detailedTestText = getByText(
+      102 |       /Looking to dive deep into your career options\?/i
 
       at LinkWithRef (node_modules/react-router-dom/index.tsx:937:11)
       at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:16305:18)
@@ -4365,7 +4365,7 @@ FAIL src/App.test.tsx
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:91:33)
+      at Object.<anonymous> (src/App.test.tsx:99:33)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -4375,13 +4375,13 @@ FAIL src/App.test.tsx
 
     TypeError: Cannot destructure property 'basename' of 'React__namespace.useContext(...)' as it is null.
 
-      100 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
-      101 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
-    > 102 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
+      108 |   // Test to check if inputting API key and clicking submit button calls handleSubmit
+      109 |   test("inputting API key and clicking submit button calls handleSubmit", () => {
+    > 110 |     const { getByPlaceholderText, getByText } = render(<HomeScreen />);
           |                                                       ^
-      103 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-      104 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
-      105 |
+      111 |     const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
+      112 |     const submitButton = getByText(/Submit/i); // Get the submit button by its text
+      113 |
 
       at LinkWithRef (node_modules/react-router-dom/index.tsx:937:11)
       at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:16305:18)
@@ -4398,7 +4398,7 @@ FAIL src/App.test.tsx
       at node_modules/@testing-library/react/dist/act-compat.js:63:25
       at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
       at render (node_modules/@testing-library/react/dist/pure.js:246:10)
-      at Object.<anonymous> (src/App.test.tsx:102:55)
+      at Object.<anonymous> (src/App.test.tsx:110:55)
       at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
       at runJest (node_modules/@jest/core/build/runJest.js:404:19)
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
@@ -4419,28 +4419,28 @@ go away.[0m
 -----------------------|---------|----------|---------|---------|-------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------|---------|----------|---------|---------|-------------------
-All files              |   13.48 |        0 |   15.38 |   14.28 |                   
+All files              |   12.24 |        0 |      15 |   13.04 |                   
  src                   |       0 |        0 |       0 |       0 |                   
   App.tsx              |       0 |      100 |       0 |       0 | 16                
   index.tsx            |       0 |      100 |     100 |       0 | 8-20              
   reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10              
- src/Components        |   36.66 |        0 |   27.77 |   37.93 |                   
+ src/Components        |   29.72 |        0 |   26.31 |   31.42 |                   
   BasicTestCard.tsx    |     100 |      100 |     100 |     100 |                   
   DetailedTestCard.tsx |     100 |      100 |     100 |     100 |                   
   Footer.tsx           |   36.36 |        0 |      25 |      40 | 13-16,23-28       
   Loading.tsx          |       0 |      100 |       0 |       0 | 5                 
-  Question.tsx         |       0 |        0 |       0 |       0 | 22-59             
+  Question.tsx         |       0 |        0 |       0 |       0 | 22-60             
   navBar.tsx           |     100 |      100 |     100 |     100 |                   
-  progress.tsx         |   33.33 |      100 |      25 |   33.33 | 12-14,47-50       
- src/Pages             |    2.12 |        0 |    5.55 |    2.32 |                   
+  progress.tsx         |   15.38 |      100 |      20 |   16.66 | 13-43,70-73       
+ src/Pages             |    2.04 |        0 |    5.55 |    2.22 |                   
   BasicTest.tsx        |       0 |        0 |       0 |       0 | 9-116             
   DetailedTest.tsx     |       0 |        0 |       0 |       0 | 8-75              
   HomeScreen.tsx       |     100 |      100 |     100 |     100 |                   
   LoadingPage.tsx      |       0 |      100 |       0 |       0 | 5                 
-  ResultPage.tsx       |       0 |        0 |       0 |       0 | 8-153             
+  ResultPage.tsx       |       0 |        0 |       0 |       0 | 9-147             
 -----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       3 failed, 5 passed, 8 total
 Snapshots:   0 total
-Time:        3.927 s
+Time:        3.895 s
 Ran all test suites.
