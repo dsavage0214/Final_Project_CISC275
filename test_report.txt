@@ -4302,8 +4302,8 @@ FAIL src/App.test.tsx
     ✓ renders "Let me review my answers" button (4 ms)
   HomeScreen component
     ✕ renders basic test blurb (222 ms)
-    ✕ renders detailed test blurb (77 ms)
-    ✕ inputting API key and clicking submit button calls handleSubmit (75 ms)
+    ✕ renders detailed test blurb (72 ms)
+    ✕ inputting API key and clicking submit button calls handleSubmit (80 ms)
 
   ● HomeScreen component › renders basic test blurb
 
@@ -4442,5 +4442,5 @@ All files              |   13.48 |        0 |   15.38 |   14.28 |
 Test Suites: 1 failed, 1 total
 Tests:       3 failed, 5 passed, 8 total
 Snapshots:   0 total
-Time:        3.809 s
+Time:        3.935 s
 Ran all test suites.
