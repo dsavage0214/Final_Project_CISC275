@@ -4294,16 +4294,16 @@
 
 FAIL src/App.test.tsx
   NavB component
-    ✓ renders Navbar with correct branding (35 ms)
-    ✓ renders navigation links (8 ms)
+    ✓ renders Navbar with correct branding (36 ms)
+    ✓ renders navigation links (7 ms)
   FinishScreen component
-    ✓ renders congratulations message (5 ms)
-    ✓ renders "Take me to the results" button (4 ms)
-    ✓ renders "Let me review my answers" button (4 ms)
+    ✓ renders congratulations message (6 ms)
+    ✓ renders "Take me to the results" button (3 ms)
+    ✓ renders "Let me review my answers" button (3 ms)
   HomeScreen component
-    ✕ renders basic test blurb (222 ms)
-    ✕ renders detailed test blurb (72 ms)
-    ✕ inputting API key and clicking submit button calls handleSubmit (80 ms)
+    ✕ renders basic test blurb (235 ms)
+    ✕ renders detailed test blurb (79 ms)
+    ✕ inputting API key and clicking submit button calls handleSubmit (86 ms)
 
   ● HomeScreen component › renders basic test blurb
 
@@ -4442,5 +4442,5 @@ All files              |   13.48 |        0 |   15.38 |   14.28 |
 Test Suites: 1 failed, 1 total
 Tests:       3 failed, 5 passed, 8 total
 Snapshots:   0 total
-Time:        3.935 s
+Time:        3.813 s
 Ran all test suites.
