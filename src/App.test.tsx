@@ -2,7 +2,7 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { NavB } from "./Components/navBar";
+import { NavB } from "./Components/NavBar";
 import { FinishScreen } from "./Components/progress";
 import "./Pages/HomeScreen";
 import { questionJsonProps } from "./Components/Question";

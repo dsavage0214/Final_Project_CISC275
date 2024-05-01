@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import {FinishScreen, QuizProgressBar} from "../Components/progress";
-import { NavB } from "../Components/navBar";
+import { NavB } from "../Components/NavBar";
 import "../CSS/Tests.css";
 import { Question, questionJsonProps } from "../Components/Question";
 

@@ -1,26 +1,57 @@
-.Text-blurb {
-  padding-top: 6vh;
-  max-width: 75vw;
-  text-align: start
+@media (orientation: landscape) {
+  .Home-body {
+    background-color: #282c34;
+    height: 93vh; /* height gotten by subtracting 100 by the height of the NavB */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    font-size: calc(5px + 2vmin);
+    color: white;
+  }
+
+  .home-card-bg {
+    width: 49.9vw;
+  }
+
+  .home-card-body {
+    width: 40vw;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+  }
 }
 
-.Home-body {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (orientation: portrait) {/* 1100px was chosen due to that being the point where components started to look bad */
+  .Home-body {
+    background-color: #282c34;
+    height: 93vh; /* height gotten by subtracting 100 by the height of the NavB */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    font-size: calc(5px + 2vmin);
+    color: white;
+  }
+
+  .home-card-bg {
+    height: 49.9vh;
+  }
+
+  .home-card-body {
+    max-width: 49vh;
+  }
+}
+
+.home-card-button {
+  font-size: calc(6px + 2vmin);
+}
+
+.home-card-contents{
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.test-container {
-  display: flex;
-  justify-content: space-between; /* Adjust spacing between the test components */
-  margin: 20px 0; /* Add margin for spacing between the test components and footer */
-}
-
-.test {
-  flex: 1; /* Ensure equal width for both test components */
-  margin-bottom: 20px; /* Adjust spacing between test components */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(12px) brightness(.5);
 }
