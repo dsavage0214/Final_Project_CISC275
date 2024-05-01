@@ -44,8 +44,9 @@
     min-height: 30vh;
     min-width: 60vw;
     font-size: calc(10px + 2vmin);
-    background: #333333;
+    background: #545459;
     color: white;
+    border-radius: 10px;
     opacity: 0.8;
     
 }
@@ -62,6 +63,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background-color:#545459;
+    border-radius: 10px;
+    opacity: 0.9;
+
 }
 
 .choice-button{
@@ -76,4 +81,4 @@
 
 .choice-button.selected {
     background-color: #0b39dd;
-  }
+}
