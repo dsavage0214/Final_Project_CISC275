@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url('../Image/BasicImage.jpg');
+    background-image: url('../Image/BlurBasicImage.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url('../Image/DetailedImage.jpg');
+    background-image: url('../Image/BlurDetailedImage.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -81,4 +81,8 @@
 
 .choice-button.selected {
     background-color: #0b39dd;
+}
+
+.blur{
+    filter: blur(12px);
 }
