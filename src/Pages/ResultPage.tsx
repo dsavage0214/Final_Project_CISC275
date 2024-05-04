@@ -77,17 +77,56 @@ function ResultAccordion({
 
 export default function ResultPage(): React.JSX.Element {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [report, setReport] = useState<rootJson>();
+  const [report, setReport] = useState<Array<JsonParam>>();
   const location = useLocation()
 
   useEffect(() => {
+    async function assist_report() {
+      const career_asst: string = "asst_BkCqfCEjPOnW3Z3X0ePsamu8";
+      const results: string = location.state;
+
+      // split up the prompt into variables to make it easier to understand what's being asked of the API
+      const job_str: string = "What's the best career for the user based off of these results? Make the JSON key for" +
+          " the job \"job\"\n\n"
+      const desc_str: string = "Write a 3 sentence paragraph explaining what that job entails. Make the JSON key for " +
+          "the description \"description\"\n\n"
+      const just_str: string = "Explain why the job is a good fit for the test taker. Respond as if you were speaking " +
+          "to the test taker. Make the JSON key for the explanation \"justification\"\n\n"
+      const train_str: string = "For each career, what training or education is needed? Please make the JSON key for " +
+          "each explanation \"training\"\n\n"
+      const org_str: string = "For each career, list a couple of organizations that would hire in that field? Make " +
+          "the JSON key for each explanation \"orgs\""
+
+      const assistant = await openai.beta.assistants.retrieve(career_asst);
+      const thread = await openai.beta.threads.create();
+
+      const message = await openai.beta.threads.messages.create(
+          thread.id,
+          {
+            role: "user",
+            content: "Here is the results of the test\n" + results +
+                job_str + desc_str + just_str + train_str + org_str
+          }
+      )
+
+      let run = await openai.beta.threads.runs.createAndPoll(
+          thread.id, {assistant_id: career_asst}
+      )
+
+      if (run.status === "completed") {
+
+      }
+    }
+
+    /*
     async function gen_report() {
       /**
        * Calls the OpenAI API to generate a JSON file containing ChatGPT's career suggestions, should only be called
        * in the useEffect hook
        * @author Stephen Sayers
        */
-      const sys_role: string =
+    /*
+    const sys_role: string =
           "You're the reviewer of the results of a career test. You'll provide people the best possible suggestions for " +
           "the career someone should take based off of the results of the test. Responses should be in JSON format where " +
           "each career suggested should be its own JSON object, the root key for the JSON should be titled \"careers\"." +
@@ -142,12 +181,14 @@ export default function ResultPage(): React.JSX.Element {
       
     }
     gen_report();
+  */
+
   }, [location.state]);
 
   return (
     <div className={"placeholder-container"}>
       <h2>Test Completed!</h2>
-      {isLoading ? <LoadingPage /> : <ResultAccordion GPTReport={report} />}
+      {/*isLoading ? <LoadingPage /> : <ResultAccordion GPTReport={report} />*/}
     </div>
   );
 }
