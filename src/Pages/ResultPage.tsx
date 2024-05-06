@@ -5,6 +5,8 @@ import "../CSS/ReportScreen.css";
 import { Accordion } from "react-bootstrap";
 import LoadingPage from "./LoadingPage";
 import {useLocation} from "react-router-dom";
+import {text} from "node:stream/consumers";
+import {safeJSON} from "openai/core";
 
 let apiKey: string | undefined = find_key();
 
@@ -81,42 +83,50 @@ export default function ResultPage(): React.JSX.Element {
   const location = useLocation()
 
   useEffect(() => {
-    async function assist_report() {
-      const career_asst: string = "asst_BkCqfCEjPOnW3Z3X0ePsamu8";
-      const results: string = location.state;
+      async function assist_report() {
+        const career_asst: string = "asst_BkCqfCEjPOnW3Z3X0ePsamu8";
+        const results: string = location.state;
 
-      // split up the prompt into variables to make it easier to understand what's being asked of the API
-      const job_str: string = "What's the best career for the user based off of these results? Make the JSON key for" +
-          " the job \"job\"\n\n"
-      const desc_str: string = "Write a 3 sentence paragraph explaining what that job entails. Make the JSON key for " +
-          "the description \"description\"\n\n"
-      const just_str: string = "Explain why the job is a good fit for the test taker. Respond as if you were speaking " +
-          "to the test taker. Make the JSON key for the explanation \"justification\"\n\n"
-      const train_str: string = "For each career, what training or education is needed? Please make the JSON key for " +
-          "each explanation \"training\"\n\n"
-      const org_str: string = "For each career, list a couple of organizations that would hire in that field? Make " +
-          "the JSON key for each explanation \"orgs\""
+        // split up the prompt into variables to make it easier to understand what's being asked of the API
+        const job_str: string = "What's the best career for the user based off of these results? Make the JSON key for" +
+            " the job \"job\"\n\n"
+        const desc_str: string = "Write a 3 sentence paragraph explaining what that job entails. Make the JSON key for " +
+            "the description \"description\"\n\n"
+        const just_str: string = "Explain why the job is a good fit for the test taker. Respond as if you were speaking " +
+            "to the test taker. Make the JSON key for the explanation \"justification\"\n\n"
+        const train_str: string = "For each career, what training or education is needed? Please make the JSON key for " +
+            "each explanation \"training\"\n\n"
+        const org_str: string = "For each career, list a couple of organizations that would hire in that field? Make " +
+            "the JSON key for each explanation \"orgs\""
 
-      const assistant = await openai.beta.assistants.retrieve(career_asst);
-      const thread = await openai.beta.threads.create();
+        const assistant = await openai.beta.assistants.retrieve(career_asst);
+        const thread = await openai.beta.threads.create(undefined);
 
-      const message = await openai.beta.threads.messages.create(
-          thread.id,
-          {
-            role: "user",
-            content: "Here is the results of the test\n" + results +
-                job_str + desc_str + just_str + train_str + org_str
+        await openai.beta.threads.messages.create(
+            thread.id,
+            {
+              role: "user",
+              content: "Here is the results of the test\n" + results +
+                  job_str + desc_str + just_str + train_str + org_str
+            }
+        )
+
+        let run = await openai.beta.threads.runs.createAndPoll(
+            thread.id, {assistant_id: assistant.id, additional_instructions: "do not use line breaks in your response"}
+        )
+
+        if (run.status === "completed") {
+          const messages = await openai.beta.threads.messages.list(run.thread_id)
+          let report: Array<JsonParam> = []
+          for (const msg of messages.data) {
+            if (msg.content[0].type === "text") {report = [...report, JSON.parse(msg.content[0].text.value)]}
           }
-      )
-
-      let run = await openai.beta.threads.runs.createAndPoll(
-          thread.id, {assistant_id: career_asst}
-      )
-
-      if (run.status === "completed") {
+          //setReport(report)
+          console.log(report)
+        }
+        else {console.log(run)}
 
       }
-    }
 
     /*
     async function gen_report() {
@@ -182,13 +192,21 @@ export default function ResultPage(): React.JSX.Element {
     }
     gen_report();
   */
-
+  assist_report()
   }, [location.state]);
+
+  const stop_errors: rootJson = {careers: [{
+    job: "test",
+    description: "test", // what you'd do in the job
+    justification: "test", // why GPT picked this job for the user
+    training: "test", // what degree, certification, ect you'd need for the job
+    orgs: ["test"] // what company, charity, government, ect. hires people in this job
+  }]}
 
   return (
     <div className={"placeholder-container"}>
       <h2>Test Completed!</h2>
-      {/*isLoading ? <LoadingPage /> : <ResultAccordion GPTReport={report} />*/}
+      {isLoading ? <LoadingPage /> : <ResultAccordion GPTReport={stop_errors} />}
     </div>
   );
 }
