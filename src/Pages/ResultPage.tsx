@@ -5,8 +5,8 @@ import "../CSS/ReportScreen.css";
 import { Accordion } from "react-bootstrap";
 import LoadingPage from "./LoadingPage";
 import {useLocation} from "react-router-dom";
-import {text} from "node:stream/consumers";
 import {safeJSON} from "openai/core";
+import {threadId} from "node:worker_threads";
 
 let apiKey: string | undefined = find_key();
 
@@ -81,10 +81,23 @@ export default function ResultPage(): React.JSX.Element {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [report, setReport] = useState<Array<JsonParam>>();
   const location = useLocation()
+  const assistantID: string = "asst_BkCqfCEjPOnW3Z3X0ePsamu8";
 
   useEffect(() => {
-      async function assist_report() {
-        const career_asst: string = "asst_BkCqfCEjPOnW3Z3X0ePsamu8";
+    async function resolveRun(run: OpenAI.Beta.Threads.Runs.Run) {
+      console.log("In resolveRun")
+      let messages = await openai.beta.threads.messages.list(run.thread_id)
+      let report: Array<JsonParam> = []
+      for (const msg of messages.data.reverse()) {
+        if (msg.content[0].type === "text" && msg.content[0].text.value[0] === "{") {
+          report = [...report, JSON.parse(msg.content[0].text.value)]
+        }
+      }
+      setReport(report)
+      console.log(report)
+    }
+
+    async function assistReport() {
         const results: string = location.state;
 
         // split up the prompt into variables to make it easier to understand what's being asked of the API
@@ -99,7 +112,6 @@ export default function ResultPage(): React.JSX.Element {
         const org_str: string = "For each career, list a couple of organizations that would hire in that field? Make " +
             "the JSON key for each explanation \"orgs\""
 
-        const assistant = await openai.beta.assistants.retrieve(career_asst);
         const thread = await openai.beta.threads.create(undefined);
 
         await openai.beta.threads.messages.create(
@@ -112,20 +124,36 @@ export default function ResultPage(): React.JSX.Element {
         )
 
         let run = await openai.beta.threads.runs.createAndPoll(
-            thread.id, {assistant_id: assistant.id, additional_instructions: "do not use line breaks in your response"}
+            thread.id,
+            {assistant_id: assistantID, additional_instructions: "do not use line breaks in your response"}
         )
-
         if (run.status === "completed") {
-          const messages = await openai.beta.threads.messages.list(run.thread_id)
-          let report: Array<JsonParam> = []
-          for (const msg of messages.data) {
-            if (msg.content[0].type === "text") {report = [...report, JSON.parse(msg.content[0].text.value)]}
-          }
-          //setReport(report)
-          console.log(report)
-        }
-        else {console.log(run)}
+          resolveRun(run);
 
+          for (let i = 0; i < 9; i++) {
+            await openai.beta.threads.messages.create(
+                thread.id,
+                {
+                  role: "user",
+                  content: "Using the test results from the first message, suggest another career. respond in the same " +
+                      "format as the first message"
+                }
+            )
+            run = await openai.beta.threads.runs.createAndPoll(
+                thread.id,
+                {assistant_id: assistantID, additional_instructions: "do not use line breaks in your response"}
+            )
+            if (run.status === "completed") {resolveRun(run)}
+            else {
+              console.log(run.status)
+              if (run.status === "failed") {console.log(run.last_error)}
+            }
+          }
+        }
+        else {
+          console.log(run.status)
+          if (run.status === "failed") {console.log(run.last_error)}
+        }
       }
 
     /*
@@ -192,8 +220,8 @@ export default function ResultPage(): React.JSX.Element {
     }
     gen_report();
   */
-  assist_report()
-  }, [location.state]);
+  assistReport()
+  }, []);
 
   const stop_errors: rootJson = {careers: [{
     job: "test",
