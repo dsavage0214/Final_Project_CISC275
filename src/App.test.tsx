@@ -1,117 +1,226 @@
-/* eslint-disable testing-library/prefer-screen-queries */
-import React from "react";
-import { fireEvent, render } from "@testing-library/react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { NavB } from "./Components/NavBar";
-import { FinishScreen } from "./Components/progress";
-import "./Pages/HomeScreen";
-import { questionJsonProps } from "./Components/Question";
-import HomeScreen from "./Pages/HomeScreen";
+// Footer.test.tsx
 
-// Tests for NavB component
-describe("NavB component", () => {
-  // Test to check if Navbar renders with correct branding
-  test("renders Navbar with correct branding", () => {
-    const { getByText } = render(
-      <Router>
-        <NavB />
-      </Router>
-    );
-    const brandingElement = getByText(/Career Finder/i); // Check if "Career Finder" text is rendered
-    expect(brandingElement).toBeInTheDocument();
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
+import Footer from './Components/Footer';
+import Loading from './Components/Loading';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { NavB } from './Components/NavBar';
+import {exportResult,QuizProgressBar,FinishScreen} from './Components/progress';
+
+describe('Footer component', () => {
+  it('renders without crashing', () => {
+    render(<Footer />);
   });
 
-  // Test to check if navigation links render correctly
-  test("renders navigation links", () => {
-    const { getByText } = render(
-      <Router>
-        <NavB />
-      </Router>
-    );
-    const basicTestLink = getByText(/Basic Test/i); // Check if "Basic Test" link is rendered
-    const detailedTestLink = getByText(/Detailed Test/i); // Check if "Detailed Test" link is rendered
+  it('updates input value when typed', () => {
+    const { getByPlaceholderText } = render(<Footer />);
+    const input = getByPlaceholderText('Insert API Key Here');
+    
+    fireEvent.change(input, { target: { value: 'testApiKey' } });
 
-    expect(basicTestLink).toBeInTheDocument();
-    expect(detailedTestLink).toBeInTheDocument();
-  });
-});
-
-// Tests for FinishScreen component
-describe("FinishScreen component", () => {
-  const questions: Array<questionJsonProps> = [ // a fake question list to pass to the tests
-    {
-      questionText: "placeholder",
-      type: "open-ended"
-    }
-  ]
-
-  // Test to check if congratulations message renders
-  test("renders congratulations message", () => {
-    const { getByText } = render(
-      <Router>
-        <FinishScreen setIndex={() => {}} questions={questions} responses={[""]}/>
-      </Router>
-    );
-    const congratulationsMessage = getByText(
-      /Congratulations! You've finished the test!/i
-    ); // Check if congrats message is rendered
-    expect(congratulationsMessage).toBeInTheDocument();
+    expect(input.value).toBe('testApiKey');
   });
 
-  // Test to check if "Take me to the results" button renders
-  test('renders "Take me to the results" button', () => {
-    const { getByText } = render(
-      <Router>
-        <FinishScreen setIndex={() => {}} questions={questions} responses={[""]}/>
-      </Router>
-    );
-    const resultsButton = getByText(/Take me to the results/i); // Check if "Take me to the results" button is rendered
-    expect(resultsButton).toBeInTheDocument();
-  });
+  it('submits form with correct API key', () => {
+    const mockLocalStorageSetItem = jest.fn();
+    Object.defineProperty(window, 'localStorage', {
+      value: {
+        setItem: mockLocalStorageSetItem,
+      },
+      writable: true,
+    });
 
-  // Test to check if "Let me review my answers" button renders
-  test('renders "Let me review my answers" button', () => {
-    const { getByText } = render(
-      <Router>
-        <FinishScreen setIndex={() => {}} questions={questions} responses={[""]}/>
-      </Router>
-    );
-    const reviewButton = getByText(/Let me review my answers/i); // Check if "Let me review my answers" button is rendered
-    expect(reviewButton).toBeInTheDocument();
+    const { getByPlaceholderText, getByText } = render(<Footer />);
+    const input = getByPlaceholderText('Insert API Key Here');
+    const submitButton = getByText('Submit');
+
+    fireEvent.change(input, { target: { value: 'testApiKey' } });
+    fireEvent.click(submitButton);
+
+    expect(mockLocalStorageSetItem).toHaveBeenCalledWith('MYKEY', JSON.stringify('testApiKey'));
   });
 });
+  describe('Loading component', () => {
+    it('renders without crashing', () => {
+      render(<Loading />);
+    });
 
-// Tests for HomeScreen component
-describe("HomeScreen component", () => {
-  // Test to check if basic test blurb renders
-  test("renders basic test blurb", () => {
-    const { getByText } = render(<HomeScreen />);
-    const basicTestHeader = getByText(/Basic Test/i); // Check if "Basic Test" header is rendered
-    const basicTestText = getByText(
-      /Concerned about the path of your career\?/i
-    ); // Check if description text is rendered
-    expect(basicTestHeader).toBeInTheDocument();
-    expect(basicTestText).toBeInTheDocument();
+    it('renders loading text', () => {
+      const { getByText } = render(<Loading />);
+      const loadingText = getByText('Loading');
+
+      expect(loadingText).toBeInTheDocument();
+    });
+
+    it('renders spinner element', () => {
+      const { getByRole } = render(<Loading />);
+      const spinner = getByRole('status');
+
+      expect(spinner).toBeInTheDocument();
+    });
+
+    it('has correct spinner styles', () => {
+      const { getByRole } = render(<Loading />);
+      const spinner = getByRole('status');
+
+      expect(spinner).toHaveStyle('width: 5em; height: 5em;');
+    });
   });
-
-  // Test to check if detailed test blurb renders
-  test("renders detailed test blurb", () => {
-    const { getByText } = render(<HomeScreen />);
-    const detailedTestHeader = getByText(/Detailed Test/i); // Check if "Detailed Test" header is rendered
-    const detailedTestText = getByText(
-      /Looking to dive deep into your career options\?/i
-    ); // Check if description text is rendered
-    expect(detailedTestHeader).toBeInTheDocument();
-    expect(detailedTestText).toBeInTheDocument();
+  describe('NavB component', () => {
+    it('renders without crashing', () => {
+      render(
+        <Router>
+          <NavB />
+        </Router>
+      );
+    });
+  
+    it('renders brand link correctly', () => {
+      const { getByText } = render(
+        <Router>
+          <NavB />
+        </Router>
+      );
+      const brandLink = getByText('Career Finder');
+  
+      expect(brandLink).toBeInTheDocument();
+      expect(brandLink.getAttribute('href')).toBe('/');
+    });
+  
+    it('renders basic test link correctly', () => {
+      const { getByText } = render(
+        <Router>
+          <NavB />
+        </Router>
+      );
+      const basicTestLink = getByText('Basic Test');
+  
+      expect(basicTestLink).toBeInTheDocument();
+      expect(basicTestLink.getAttribute('href')).toBe('/basic-test');
+    });
+  
+    it('renders detailed test link correctly', () => {
+      const { getByText } = render(
+        <Router>
+          <NavB />
+        </Router>
+      );
+      const detailedTestLink = getByText('Detailed Test');
+  
+      expect(detailedTestLink).toBeInTheDocument();
+      expect(detailedTestLink.getAttribute('href')).toBe('/detailed-test');
+    });
   });
-
-  // Test to check if inputting API key and clicking submit button calls handleSubmit
-  test("inputting API key and clicking submit button calls handleSubmit", () => {
-    const { getByPlaceholderText, getByText } = render(<HomeScreen />);
-    const apiKeyInput = getByPlaceholderText(/Insert API Key Here/i); // Get the input field by its placeholder text
-    const submitButton = getByText(/Submit/i); // Get the submit button by its text
-
-    fireEvent.change(apiKeyInput, { target: { value: "test-api-key" } }); // Simulate typing an API key
-    fireEvent.click(submitButton); // Simulate clicking the submit button
+  describe('progress components', () => {
+    const questions = [
+      { questionText: 'Question 1' },
+      { questionText: 'Question 2' },
+      { questionText: 'Question 3' },
+    ];
+    const responses = ['Response 1', 'Response 2', 'Response 3'];
+    const setIndexMock = jest.fn();
+    const navigateMock = jest.fn();
+  
+    it('renders without crashing', () => {
+      render(
+        <FinishScreen
+          setIndex={setIndexMock}
+          questions={questions}
+          responses={responses}
+        />
+      );
+    });
+  
+    it('renders congratulations message', () => {
+      const { getByText } = render(
+        <FinishScreen
+          setIndex={setIndexMock}
+          questions={questions}
+          responses={responses}
+        />
+      );
+      const congratulationsMessage = getByText("Congratulations! You've finished the test!");
+  
+      expect(congratulationsMessage).toBeInTheDocument();
+    });
+  
+    it('calls navigate function with correct path and state when "Take me to the results" button is clicked', () => {
+      const { getByText } = render(
+        <FinishScreen
+          setIndex={setIndexMock}
+          questions={questions}
+          responses={responses}
+        />
+      );
+      const takeMeToResultsButton = getByText('Take me to the results');
+  
+      fireEvent.click(takeMeToResultsButton);
+  
+      expect(navigateMock).toHaveBeenCalledWith("/results", { state: expect.any(String) });
+    });
+  
+    it('calls setIndex function with 0 when "Let me review my answers" button is clicked', () => {
+      const { getByText } = render(
+        <FinishScreen
+          setIndex={setIndexMock}
+          questions={questions}
+          responses={responses}
+        />
+      );
+      const reviewAnswersButton = getByText('Let me review my answers');
+  
+      fireEvent.click(reviewAnswersButton);
+  
+      expect(setIndexMock).toHaveBeenCalledWith(0);
+    });
   });
-});
+  describe('QuizProgressBar', () => {
+    it('renders correctly with given progress', () => {
+      const answeredCount = 2;
+      const num_questions = 10;
+      
+      // Render the component with mocked ProgressBar
+      const { getByText } = render(
+        <QuizProgressBar answeredCount={answeredCount} num_questions={num_questions} />
+      );
+  
+      // Check if progress text is rendered
+      expect(getByText('Quiz Progress')).toBeInTheDocument();
+  
+      // Calculate expected progress percentage
+      const expectedProgressPercent = Math.floor((answeredCount / num_questions) * 100);
+      const expectedLabel = `${expectedProgressPercent}%`;
+  
+      // Check if ProgressBar is rendered with correct props
+      expect(document.querySelector('.progress-bar')).toBeInTheDocument();
+      expect(document.querySelector('.progress-bar').getAttribute('aria-valuenow')).toBe(expectedProgressPercent.toString());
+      expect(getByText(expectedLabel)).toBeInTheDocument();
+    });
+  });
+  describe('exportResults function', () => {
+    it('combines questions and responses into a single string', () => {
+      // Mock input data
+      const questions = [
+        { questionText: 'Question 1' },
+        { questionText: 'Question 2' },
+        { questionText: 'Question 3' },
+      ];
+      const responses = ['Response 1', 'Response 2', 'Response 3'];
+  
+      // Expected combined string
+      const expectedResults =
+        "Q1: Question 1\n" +
+        "A1: Response 1\n\n" +
+        "Q2: Question 2\n" +
+        "A2: Response 2\n\n" +
+        "Q3: Question 3\n" +
+        "A3: Response 3\n\n";
+  
+      // Call the function with mock data
+      const results = exportResults(questions, responses);
+  
+      // Check if the returned string matches the expected string
+      expect(results).toEqual(expectedResults);
+    });
+  });

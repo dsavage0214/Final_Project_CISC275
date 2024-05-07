@@ -10,7 +10,6 @@ function Loading() {
         role="status"
         style={{ width: "5em", height: "5em" }}
       >
-        <span className="visually-hidden">Loading...</span>
       </Spinner>
     </div>
   );
