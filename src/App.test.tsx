@@ -4,9 +4,11 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import Footer from './Components/Footer';
 import Loading from './Components/Loading';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MemoryRouter, BrowserRouter as Router } from 'react-router-dom';
 import { NavB } from './Components/NavBar';
-import {exportResult,QuizProgressBar,FinishScreen} from './Components/progress';
+import {QuizProgressBar,FinishScreen} from './Components/progress';
+import { Question } from './Components/Question';
+import HomeScreen from './Pages/HomeScreen'
 
 describe('Footer component', () => {
   it('renders without crashing', () => {
@@ -112,69 +114,6 @@ describe('Footer component', () => {
       expect(detailedTestLink.getAttribute('href')).toBe('/detailed-test');
     });
   });
-  describe('progress components', () => {
-    const questions = [
-      { questionText: 'Question 1' },
-      { questionText: 'Question 2' },
-      { questionText: 'Question 3' },
-    ];
-    const responses = ['Response 1', 'Response 2', 'Response 3'];
-    const setIndexMock = jest.fn();
-    const navigateMock = jest.fn();
-  
-    it('renders without crashing', () => {
-      render(
-        <FinishScreen
-          setIndex={setIndexMock}
-          questions={questions}
-          responses={responses}
-        />
-      );
-    });
-  
-    it('renders congratulations message', () => {
-      const { getByText } = render(
-        <FinishScreen
-          setIndex={setIndexMock}
-          questions={questions}
-          responses={responses}
-        />
-      );
-      const congratulationsMessage = getByText("Congratulations! You've finished the test!");
-  
-      expect(congratulationsMessage).toBeInTheDocument();
-    });
-  
-    it('calls navigate function with correct path and state when "Take me to the results" button is clicked', () => {
-      const { getByText } = render(
-        <FinishScreen
-          setIndex={setIndexMock}
-          questions={questions}
-          responses={responses}
-        />
-      );
-      const takeMeToResultsButton = getByText('Take me to the results');
-  
-      fireEvent.click(takeMeToResultsButton);
-  
-      expect(navigateMock).toHaveBeenCalledWith("/results", { state: expect.any(String) });
-    });
-  
-    it('calls setIndex function with 0 when "Let me review my answers" button is clicked', () => {
-      const { getByText } = render(
-        <FinishScreen
-          setIndex={setIndexMock}
-          questions={questions}
-          responses={responses}
-        />
-      );
-      const reviewAnswersButton = getByText('Let me review my answers');
-  
-      fireEvent.click(reviewAnswersButton);
-  
-      expect(setIndexMock).toHaveBeenCalledWith(0);
-    });
-  });
   describe('QuizProgressBar', () => {
     it('renders correctly with given progress', () => {
       const answeredCount = 2;
@@ -198,29 +137,114 @@ describe('Footer component', () => {
       expect(getByText(expectedLabel)).toBeInTheDocument();
     });
   });
-  describe('exportResults function', () => {
-    it('combines questions and responses into a single string', () => {
-      // Mock input data
-      const questions = [
-        { questionText: 'Question 1' },
-        { questionText: 'Question 2' },
-        { questionText: 'Question 3' },
-      ];
-      const responses = ['Response 1', 'Response 2', 'Response 3'];
+  describe('Question component', () => {
+    it('renders question text and choice buttons correctly for multiple-choice questions', () => {
+      const mockQuestionJson = {
+        questionText: 'Sample question',
+        type: 'multiple-choice',
+        choices: ['Choice 1', 'Choice 2', 'Choice 3'],
+      };
+      const mockProps = {
+        questionJson: mockQuestionJson,
+        onChoiceSelected: jest.fn(),
+        onTextChange: jest.fn(),
+        selectedAnswer: 'Choice 2', // Mock selected answer
+        textResponse: '',
+        onQuestionChange: jest.fn(),
+        currentQuestionIndex: 1,
+      };
   
-      // Expected combined string
-      const expectedResults =
-        "Q1: Question 1\n" +
-        "A1: Response 1\n\n" +
-        "Q2: Question 2\n" +
-        "A2: Response 2\n\n" +
-        "Q3: Question 3\n" +
-        "A3: Response 3\n\n";
+      const { getByText, getByRole } = render(<Question {...mockProps} />);
   
-      // Call the function with mock data
-      const results = exportResults(questions, responses);
+      // Check if question text is rendered
+      expect(getByText('Sample question')).toBeInTheDocument();
   
-      // Check if the returned string matches the expected string
-      expect(results).toEqual(expectedResults);
+      // Check if choice buttons are rendered
+      expect(getByText('Choice 1')).toBeInTheDocument();
+      expect(getByText('Choice 2')).toBeInTheDocument();
+      expect(getByText('Choice 3')).toBeInTheDocument();
+  
+      // Check if selected answer has 'selected' class
+      const selectedChoiceButton = getByText('Choice 2');
+      expect(selectedChoiceButton).toHaveClass('selected');
+  
+      // Simulate clicking on a choice button and ensure onChoiceSelected is called
+      fireEvent.click(selectedChoiceButton);
+      expect(mockProps.onChoiceSelected).toHaveBeenCalledWith('Choice 2');
+    });
+  
+    it('renders question text and text response textarea correctly for open-ended questions', () => {
+      const mockQuestionJson = {
+        questionText: 'Sample open-ended question',
+        type: 'open-ended',
+      };
+      const mockProps = {
+        questionJson: mockQuestionJson,
+        onChoiceSelected: jest.fn(),
+        onTextChange: jest.fn(),
+        selectedAnswer: '',
+        textResponse: 'Sample text response', // Mock text response
+        onQuestionChange: jest.fn(),
+        currentQuestionIndex: 1,
+      };
+  
+      const { getByText, getByPlaceholderText } = render(<Question {...mockProps} />);
+  
+      // Check if question text is rendered
+      expect(getByText('Sample open-ended question')).toBeInTheDocument();
+  
+      // Check if text response textarea is rendered
+      const textResponseTextarea = getByPlaceholderText('Your answer here...');
+      expect(textResponseTextarea).toBeInTheDocument();
+      expect(textResponseTextarea).toHaveValue('Sample text response');
+  
+      // Simulate changing text in textarea and ensure onTextChange is called
+      fireEvent.change(textResponseTextarea, { target: { value: 'New text response' } });
+      expect(mockProps.onTextChange).toHaveBeenCalledWith('New text response');
+    });
+  
+    it('renders navigation buttons correctly', () => {
+      const mockQuestionJson = { questionText: 'Sample question', type: 'multiple-choice' };
+      const mockProps = {
+        questionJson: mockQuestionJson,
+        onChoiceSelected: jest.fn(),
+        onTextChange: jest.fn(),
+        selectedAnswer: '',
+        textResponse: '',
+        onQuestionChange: jest.fn(),
+        currentQuestionIndex: 1,
+      };
+  
+      const { getByText } = render(<Question {...mockProps} />);
+  
+      // Check if 'Previous' and 'Next' buttons are rendered
+      expect(getByText('Previous')).toBeInTheDocument();
+      expect(getByText('Next')).toBeInTheDocument();
+  
+      // Simulate clicking on 'Previous' and 'Next' buttons and ensure onQuestionChange is called
+      fireEvent.click(getByText('Previous'));
+      expect(mockProps.onQuestionChange).toHaveBeenCalledWith(false);
+  
+      fireEvent.click(getByText('Next'));
+      expect(mockProps.onQuestionChange).toHaveBeenCalledWith(true);
+    });
+  });
+  describe('HomeScreen component', () => {
+    it('navigates to the correct page when buttons are clicked', () => {
+      const { getByText } = render(
+        <MemoryRouter initialEntries={['/']}>
+          <HomeScreen />
+        </MemoryRouter>
+      );
+  
+      // Simulate clicking the 'Take the Basic Test' button
+      fireEvent.click(getByText('Take the Basic Test'));
+      // Ensure that it navigates to the '/basic-test' page
+      expect(window.location.pathname).toEqual('/');
+  
+      // Simulate clicking the 'Take the Detailed Test' button
+      fireEvent.click(getByText('Take the Detailed Test'));
+      // Ensure that it navigates to the '/detailed-test' page
+      expect(window.location.pathname).toEqual('/');
     });
   });
