@@ -1,9 +1,0 @@
-.placeholder-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.placeholder-text-box {
-    max-width: 80vw;
-}

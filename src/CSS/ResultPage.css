@@ -1,0 +1,26 @@
+.placeholder-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.accordion-body {
+    width: 80vw;
+}
+
+@keyframes breathe {
+    0% {color: black;}
+    50% {color: #969696;}
+    100% {color: black;}
+}
+
+.placeholder-header {
+    animation-name: breathe;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-size: calc(1px + 2vmin);
+}
+
+.accordion-header {
+    font-size: calc(1px + 2vmin);
+}
