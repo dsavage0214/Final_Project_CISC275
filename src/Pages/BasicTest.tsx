@@ -107,11 +107,6 @@ const questions: Array<questionJsonProps> = [
 
     const answeredCount = responses.filter(response => response !== '').length;
 
-    /*
-    const handleSubmit = () => {
-        console.log("Submitted responses: ", responses);
-    };
-     */
 
     return (
         <div>
