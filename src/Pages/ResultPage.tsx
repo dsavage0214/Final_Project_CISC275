@@ -1,21 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { find_key } from "../Components/Footer";
 import OpenAI from "openai";
-import "../CSS/ReportScreen.css";
+import "../CSS/ResultPage.css";
 import { Accordion } from "react-bootstrap";
 import LoadingPage from "./LoadingPage";
 import {useLocation} from "react-router-dom";
 
-let apiKey: string | undefined = find_key();
 
+const NUM_JOBS = 10; // the amount of jobs you'd want the API to suggest
+let apiKey: string | undefined = find_key();
 // Initialize OpenAI API
 const openai = new OpenAI({ apiKey: apiKey, dangerouslyAllowBrowser: true });
-
-// these two interfaces are needed to pass the JSON that GPT generates without getting errors
-interface rootJson extends Object {
-  careers: Array<JsonParam>; // see jsonParam for what this is
-}
-
+// The JSON format that the API outputs
 interface JsonParam extends Object {
   job: string; // the name of the job
   description: string; // what you'd do in the job
@@ -24,43 +20,47 @@ interface JsonParam extends Object {
   orgs: Array<string>; // what company, charity, government, ect. hires people in this job
 }
 
+/**
+ * Takes the JSON report given by the API request to OpenAPI and then formats it into a Bootstrap accordion
+ * @author: Stephen Sayers
+ */
 function ResultAccordion({
-  GPTReport,
+  GPTReport, numEntries
 }: {
-  GPTReport: rootJson | undefined;
+  GPTReport: Array<JsonParam> | undefined,
+  numEntries: number;
 }): JSX.Element {
   /**
-   * Takes the JSON report given by the API request to OpenAPI and then formats it into a Bootstrap accordion
+   * makes the body of each accordion fold. Used as a callback function in the return of ResultAccordion function
+   * Should be used with Array.prototype.map
    * @author: Stephen Sayers
+   *
+   * @param json_object - an element from report
+   * @param i - the index for the accordion fold, used to make a unique id for the accordion fold
    */
-
   function makeAccordionBody(json_object: JsonParam, i: number) {
-    /**
-     * makes the body of each accordion fold. Used as a callback function in the return of ResultAccordion function
-     * @author: Stephen Sayers
-     */
     return (
       <Accordion.Item eventKey={i.toString()}>
-        <Accordion.Header>{json_object.job}</Accordion.Header>
+        <Accordion.Header><h3 className="accordion-header">{json_object.job}</h3></Accordion.Header>
         <Accordion.Body>
           <p>
-            <b>What is this job:</b> {json_object.description}
+            <b>Job description:</b> {json_object.description}
           </p>
-          <br />
+          <br/>
           <p>
             <b>Why it's a good fit:</b> {json_object.justification}
           </p>
-          <br />
+          <br/>
           <p>
             <b>training/education needed:</b> {json_object.training}
           </p>
-          <br />
+          <br/>
           <p>
             <b>Organizations in the field:</b>{" "}
             {json_object.orgs.reduce(
-              (print_string: string, org: string) =>
-                print_string + (org + ", "),
-              ""
+                (print_string: string, org: string) =>
+                    print_string + (org + ", "),
+                ""
             )}
           </p>
         </Accordion.Body>
@@ -68,86 +68,135 @@ function ResultAccordion({
     );
   }
 
+  /**
+   * Makes an Accordion fold with the same styling as makeAccordionBody except with placeholders
+   * @author Stephen Sayers
+   *
+   * @param i - the index of the accordion fold. used to make a unique id for the fold
+   */
+  function makePlaceholderAccordionBody(i: number): JSX.Element {
+    return(
+        <Accordion.Item eventKey={i.toString()}>
+          <Accordion.Header>
+            <h3 className="placeholder-header">Loading...</h3>
+          </Accordion.Header>
+        </Accordion.Item>
+    )
+  }
+
+  const placeholders: Array<JSX.Element> = []
+  for (let i = numEntries; i < NUM_JOBS; i++) {
+    placeholders.push(makePlaceholderAccordionBody(i))
+  }
+
   return (
     <Accordion alwaysOpen={true}>
-      {GPTReport?.careers.map(makeAccordionBody)}
+      {GPTReport?.map(makeAccordionBody)}
+      {placeholders}
     </Accordion>
   );
 }
 
 export default function ResultPage(): React.JSX.Element {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [report, setReport] = useState<rootJson>();
+  const [report, setReport] = useState<Array<JsonParam>>();
   const location = useLocation()
+  const assistantID: string = "asst_BkCqfCEjPOnW3Z3X0ePsamu8"; // assistant was made in advance in the OpenAI playground
+  const [numEntries, setNumEntries] = useState<number>(0)
 
   useEffect(() => {
-    async function gen_report() {
-      /**
-       * Calls the OpenAI API to generate a JSON file containing ChatGPT's career suggestions, should only be called
-       * in the useEffect hook
-       * @author Stephen Sayers
-       */
-      const sys_role: string =
-          "You're the reviewer of the results of a career test. You'll provide people the best possible suggestions for " +
-          "the career someone should take based off of the results of the test. Responses should be in JSON format where " +
-          "each career suggested should be its own JSON object, the root key for the JSON should be titled \"careers\"." +
-          "\n\nThe results of the test are the following:\n\n";
+    /**
+     * Helper function to genAssistReport. Gets the thread's messages from OpenAI, collects GPT's responses, and then
+     * updates the state of report
+     * @author Stephen Sayers
+     *
+     * @param run - the current run from genAssistReport
+     */
+    async function resolveRun(run: OpenAI.Beta.Threads.Runs.Run) {
+      console.log("In resolveRun")
+      let messages = await openai.beta.threads.messages.list(run.thread_id)
+      let report: Array<JsonParam> = []
+      for (const msg of messages.data.reverse()) {
+        if (msg.content[0].type === "text" && msg.content[0].text.value[0] === "{") {
+          report = [...report, JSON.parse(msg.content[0].text.value)]
+        }
+      }
+      setReport(report)
+      setNumEntries(report.length)
+      console.log(report)
+    }
+
+    /**
+     * Generates a career report using OpenAI's assistants API. Is able to generate the report one career at a time to
+     * lower perceived load times compared to genReport
+     * @author Stephen Sayers
+     */
+    async function genAssistReport() {
       const results: string = location.state;
 
-      const report = await openai.chat.completions.create({
-        model: "gpt-4-turbo",
-        messages: [
-          { role: "system", content: sys_role + results }, // GPT's role and the test results
-          {
-            role: "assistant",
-            content:
-              'What\'s the 10 best careers for the test taker? Make the JSON key for each career "job"',
-          },
-          {
-            role: "user",
-            content:
-              "For each career, write a 3 sentence paragraph explaining what that job entails. Make the JSON key for " +
-               "each description \"description\"",
-          },
-          {
-            role: "user",
-            content:
-              "For each career, Explain why the job is a good fit for the test taker. Respond as if you " +
-              "were speaking to the test taker and, Make the JSON key for each explanation \"justification\"",
-          },
-          {
-            role: "user",
-            content:
-              "For each career, what training or education is needed? Please make the JSON key for each " +
-              "explanation \"training\""
-          },
-          {
-            role: "user",
-            content:
-              "For each career, list a couple of organizations that would hire in that field? Make the " +
-              "JSON key for each explanation \"orgs\"",
-          },
-        ],
-        max_tokens: 4096, // was able to generate pretty good results in the playground with this length
-        response_format: { type: "json_object" }, // will probably be easier to handle than a string
-      });
-      console.log("GPT finished due to: " + report.choices[0].finish_reason); // to see if GPT needs more tokens
-      console.log("JSON generated:" + report.choices[0].message.content);
-      if (report.choices[0].message.content !== null) {
-        setReport(JSON.parse(report.choices[0].message.content));
-        setIsLoading(false);
-      } else {
-        await gen_report();
-      } // the message is null, API call failed and needs to be done again
-      
-    }
-    gen_report();
-  }, [location.state]);
+        // split up the prompt into variables to make it easier to understand what's being asked of the API
+        const job_str: string = "What's the best career for the user based off of these results? Make the JSON key for" +
+            " the job \"job\"\n\n"
+        const desc_str: string = "Write a 3 sentence paragraph explaining what that job entails. Make the JSON key for " +
+            "the description \"description\"\n\n"
+        const just_str: string = "Explain why the job is a good fit for the test taker. Respond as if you were speaking " +
+            "to the test taker. Make the JSON key for the explanation \"justification\"\n\n"
+        const train_str: string = "For each career, what training or education is needed? Please make the JSON key for " +
+            "each explanation \"training\"\n\n"
+        const org_str: string = "For each career, list a couple of organizations that would hire in that field? Make " +
+            "the JSON key for each explanation \"orgs\""
+
+        const thread = await openai.beta.threads.create(undefined);
+
+        await openai.beta.threads.messages.create(
+            thread.id,
+            {
+              role: "user",
+              content: "Here is the results of the test\n" + results +
+                  job_str + desc_str + just_str + train_str + org_str
+            }
+        )
+
+        let run = await openai.beta.threads.runs.createAndPoll(
+            thread.id,
+            {assistant_id: assistantID, additional_instructions: "do not use line breaks in your response"}
+        )
+        if (run.status === "completed") {
+          await resolveRun(run);
+          setIsLoading(false);
+
+          for (let i = 0; i < NUM_JOBS - 1; i++) {
+            await openai.beta.threads.messages.create(
+                thread.id,
+                {
+                  role: "user",
+                  content: "Using the test results from the first message, suggest another career. respond in the same " +
+                      "format as the first message"
+                }
+            )
+            run = await openai.beta.threads.runs.createAndPoll(
+                thread.id,
+                {assistant_id: assistantID, additional_instructions: "do not use line breaks in your response"}
+            )
+            if (run.status === "completed") {await resolveRun(run)}
+            else {
+              console.log(run.status)
+              if (run.status === "failed") {console.log(run.last_error)}
+            }
+          }
+        }
+        else {
+          console.log(run.status)
+          if (run.status === "failed") {console.log(run.last_error)}
+        }
+      }
+  genAssistReport()
+  }, []);
 
   return (
     <div className={"placeholder-container"}>
       <h2>Test Completed!</h2>
-      {isLoading ? <LoadingPage /> : <ResultAccordion GPTReport={report} />}
+      {isLoading ? <LoadingPage /> : <ResultAccordion GPTReport={report} numEntries={numEntries}/>}
     </div>
   );
 }
