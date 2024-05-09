@@ -7,7 +7,6 @@ import BasicImage from "../Image/BasicImage.jpg"
 import DetailedImage from "../Image/DetailedImage.jpg"
 import { useNavigate } from "react-router-dom";
 import {Button} from "react-bootstrap";
-import { MemoryRouter } from 'react-router-dom';
 
 
 function HomeScreenCard({img, header, body, buttonText, link}:{
