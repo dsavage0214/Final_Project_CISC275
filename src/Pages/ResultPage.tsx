@@ -191,7 +191,7 @@ export default function ResultPage(): React.JSX.Element {
         }
       }
   genAssistReport()
-  }, []);
+  }, [location.state]);
 
   return (
     <div className={"placeholder-container"}>
