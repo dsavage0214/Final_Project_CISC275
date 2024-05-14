@@ -214,11 +214,13 @@ export default function ResultPage(): React.JSX.Element {
       <NavB/>
       <div className={"placeholder-container"}>
         <h2>Test Completed!</h2>
+        <div className={"accordian"}>
         {isLoading ? (
           <LoadingPage />
         ) : (
           <ResultAccordion GPTReport={report} numEntries={numEntries} />
         )}
+        </div>
       </div>
     </div>
   );
