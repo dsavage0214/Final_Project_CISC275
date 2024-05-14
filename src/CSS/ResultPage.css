@@ -1,10 +1,10 @@
 .placeholder-container {
-    display: flex;
+    display: auto;
     flex-direction: column;
     justify-content: center;
     background-color: #282c34;
-    color: white
-    
+    color: white;
+    height: 100vh;   
 }
 
 .accordion-body {
@@ -29,3 +29,16 @@
     
 }
 
+.accordian {
+    --bs-accordian-border-color: blue;
+}
+
+.accordian-button:not(expanded){
+    background-color: #282c34;
+}
+
+.accordian-button:not(collapsed){
+    color: #ffffff;
+    background-color: #ff003c;
+    box-shadow: inset 0- 1px 0 #ff003c
+}
