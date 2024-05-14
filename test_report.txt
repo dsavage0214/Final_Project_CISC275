@@ -110,20 +110,20 @@
 
 PASS src/App.test.tsx
   Footer component
-    ✓ renders without crashing (21 ms)
-    ✓ submits form with correct API key (68 ms)
+    ✓ renders without crashing (20 ms)
+    ✓ submits form with correct API key (51 ms)
   Loading component
-    ✓ renders without crashing (17 ms)
+    ✓ renders without crashing (5 ms)
     ✓ renders loading text (5 ms)
-    ✓ renders spinner element (31 ms)
-    ✓ has correct spinner styles (17 ms)
+    ✓ renders spinner element (32 ms)
+    ✓ has correct spinner styles (15 ms)
   NavB component
     ✓ renders without crashing (9 ms)
     ✓ renders brand link correctly (4 ms)
     ✓ renders basic test link correctly (5 ms)
-    ✓ renders detailed test link correctly (4 ms)
+    ✓ renders detailed test link correctly (3 ms)
   HomeScreen component
-    ✓ navigates to the correct page when buttons are clicked (18 ms)
+    ✓ navigates to the correct page when buttons are clicked (16 ms)
 
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
@@ -140,17 +140,17 @@ go away.[0m
 ---------------------|---------|----------|---------|---------|-------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------|---------|----------|---------|---------|-------------------
-All files            |   10.07 |        0 |   19.04 |   10.74 |                   
+All files            |    9.77 |        0 |    18.6 |   10.48 |                   
  src                 |       0 |        0 |       0 |       0 |                   
   App.tsx            |       0 |      100 |       0 |       0 | 16                
   index.tsx          |       0 |      100 |     100 |       0 | 8-18              
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- src/Components      |   27.27 |        0 |   29.41 |   29.03 |                   
+ src/Components      |   24.32 |        0 |   27.77 |   26.47 |                   
   Footer.tsx         |   63.63 |        0 |      75 |      70 | 13-16             
   Loading.tsx        |     100 |      100 |     100 |     100 |                   
   NavBar.tsx         |     100 |      100 |     100 |     100 |                   
   Question.tsx       |       0 |        0 |       0 |       0 | 22-60             
-  progress.tsx       |       0 |      100 |       0 |       0 | 13-73             
+  progress.tsx       |       0 |        0 |       0 |       0 | 13-84             
  src/Pages           |    4.76 |        0 |   13.63 |    5.12 |                   
   BasicTest.tsx      |       0 |        0 |       0 |       0 | 9-111             
   DetailedTest.tsx   |       0 |        0 |       0 |       0 | 8-75              
@@ -161,5 +161,5 @@ All files            |   10.07 |        0 |   19.04 |   10.74 |
 Test Suites: 1 passed, 1 total
 Tests:       11 passed, 11 total
 Snapshots:   0 total
-Time:        3.531 s
+Time:        3.435 s
 Ran all test suites.
