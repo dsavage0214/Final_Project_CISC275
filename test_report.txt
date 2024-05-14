@@ -110,17 +110,17 @@
 
 PASS src/App.test.tsx
   Footer component
-    ✓ renders without crashing (20 ms)
+    ✓ renders without crashing (21 ms)
     ✓ submits form with correct API key (51 ms)
   Loading component
-    ✓ renders without crashing (5 ms)
-    ✓ renders loading text (5 ms)
-    ✓ renders spinner element (32 ms)
-    ✓ has correct spinner styles (15 ms)
+    ✓ renders without crashing (4 ms)
+    ✓ renders loading text (3 ms)
+    ✓ renders spinner element (28 ms)
+    ✓ has correct spinner styles (18 ms)
   NavB component
     ✓ renders without crashing (9 ms)
     ✓ renders brand link correctly (4 ms)
-    ✓ renders basic test link correctly (5 ms)
+    ✓ renders basic test link correctly (4 ms)
     ✓ renders detailed test link correctly (3 ms)
   HomeScreen component
     ✓ navigates to the correct page when buttons are clicked (16 ms)
@@ -161,5 +161,5 @@ All files            |    9.77 |        0 |    18.6 |   10.48 |
 Test Suites: 1 passed, 1 total
 Tests:       11 passed, 11 total
 Snapshots:   0 total
-Time:        3.435 s
+Time:        3.508 s
 Ran all test suites.
