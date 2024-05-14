@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #282c34;
+    color: white
+    
 }
 
 .accordion-body {
@@ -23,4 +26,6 @@
 
 .accordion-header {
     font-size: calc(1px + 2vmin);
+    
 }
+

@@ -4,8 +4,8 @@ import OpenAI from "openai";
 import "../CSS/ResultPage.css";
 import { Accordion } from "react-bootstrap";
 import LoadingPage from "./LoadingPage";
-import {useLocation} from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
+import { NavB } from "../Components/NavBar";
 
 const NUM_JOBS = 10; // the amount of jobs you'd want the API to suggest
 let apiKey: string | undefined = find_key();
@@ -25,9 +25,10 @@ interface JsonParam extends Object {
  * @author: Stephen Sayers
  */
 function ResultAccordion({
-  GPTReport, numEntries
+  GPTReport,
+  numEntries,
 }: {
-  GPTReport: Array<JsonParam> | undefined,
+  GPTReport: Array<JsonParam> | undefined;
   numEntries: number;
 }): JSX.Element {
   /**
@@ -41,26 +42,28 @@ function ResultAccordion({
   function makeAccordionBody(json_object: JsonParam, i: number) {
     return (
       <Accordion.Item eventKey={i.toString()}>
-        <Accordion.Header><h3 className="accordion-header">{json_object.job}</h3></Accordion.Header>
+        <Accordion.Header>
+          <h3 className="accordion-header">{json_object.job}</h3>
+        </Accordion.Header>
         <Accordion.Body>
           <p>
             <b>Job description:</b> {json_object.description}
           </p>
-          <br/>
+          <br />
           <p>
             <b>Why it's a good fit:</b> {json_object.justification}
           </p>
-          <br/>
+          <br />
           <p>
             <b>training/education needed:</b> {json_object.training}
           </p>
-          <br/>
+          <br />
           <p>
             <b>Organizations in the field:</b>{" "}
             {json_object.orgs.reduce(
-                (print_string: string, org: string) =>
-                    print_string + (org + ", "),
-                ""
+              (print_string: string, org: string) =>
+                print_string + (org + ", "),
+              ""
             )}
           </p>
         </Accordion.Body>
@@ -75,18 +78,18 @@ function ResultAccordion({
    * @param i - the index of the accordion fold. used to make a unique id for the fold
    */
   function makePlaceholderAccordionBody(i: number): JSX.Element {
-    return(
-        <Accordion.Item eventKey={i.toString()}>
-          <Accordion.Header>
-            <h3 className="placeholder-header">Loading...</h3>
-          </Accordion.Header>
-        </Accordion.Item>
-    )
+    return (
+      <Accordion.Item eventKey={i.toString()}>
+        <Accordion.Header>
+          <h3 className="placeholder-header">Loading...</h3>
+        </Accordion.Header>
+      </Accordion.Item>
+    );
   }
 
-  const placeholders: Array<JSX.Element> = []
+  const placeholders: Array<JSX.Element> = [];
   for (let i = numEntries; i < NUM_JOBS; i++) {
-    placeholders.push(makePlaceholderAccordionBody(i))
+    placeholders.push(makePlaceholderAccordionBody(i));
   }
 
   return (
@@ -100,9 +103,9 @@ function ResultAccordion({
 export default function ResultPage(): React.JSX.Element {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [report, setReport] = useState<Array<JsonParam>>();
-  const location = useLocation()
+  const location = useLocation();
   const assistantID: string = "asst_BkCqfCEjPOnW3Z3X0ePsamu8"; // assistant was made in advance in the OpenAI playground
-  const [numEntries, setNumEntries] = useState<number>(0)
+  const [numEntries, setNumEntries] = useState<number>(0);
 
   useEffect(() => {
     /**
@@ -113,17 +116,20 @@ export default function ResultPage(): React.JSX.Element {
      * @param run - the current run from genAssistReport
      */
     async function resolveRun(run: OpenAI.Beta.Threads.Runs.Run) {
-      console.log("In resolveRun")
-      let messages = await openai.beta.threads.messages.list(run.thread_id)
-      let report: Array<JsonParam> = []
+      console.log("In resolveRun");
+      let messages = await openai.beta.threads.messages.list(run.thread_id);
+      let report: Array<JsonParam> = [];
       for (const msg of messages.data.reverse()) {
-        if (msg.content[0].type === "text" && msg.content[0].text.value[0] === "{") {
-          report = [...report, JSON.parse(msg.content[0].text.value)]
+        if (
+          msg.content[0].type === "text" &&
+          msg.content[0].text.value[0] === "{"
+        ) {
+          report = [...report, JSON.parse(msg.content[0].text.value)];
         }
       }
-      setReport(report)
-      setNumEntries(report.length)
-      console.log(report)
+      setReport(report);
+      setNumEntries(report.length);
+      console.log(report);
     }
 
     /**
@@ -134,69 +140,86 @@ export default function ResultPage(): React.JSX.Element {
     async function genAssistReport() {
       const results: string = location.state;
 
-        // split up the prompt into variables to make it easier to understand what's being asked of the API
-        const job_str: string = "What's the best career for the user based off of these results? Make the JSON key for" +
-            " the job \"job\"\n\n"
-        const desc_str: string = "Write a 3 sentence paragraph explaining what that job entails. Make the JSON key for " +
-            "the description \"description\"\n\n"
-        const just_str: string = "Explain why the job is a good fit for the test taker. Respond as if you were speaking " +
-            "to the test taker. Make the JSON key for the explanation \"justification\"\n\n"
-        const train_str: string = "For each career, what training or education is needed? Please make the JSON key for " +
-            "each explanation \"training\"\n\n"
-        const org_str: string = "For each career, list a couple of organizations that would hire in that field? Make " +
-            "the JSON key for each explanation \"orgs\""
+      // split up the prompt into variables to make it easier to understand what's being asked of the API
+      const job_str: string =
+        "What's the best career for the user based off of these results? Make the JSON key for" +
+        ' the job "job"\n\n';
+      const desc_str: string =
+        "Write a 3 sentence paragraph explaining what that job entails. Make the JSON key for " +
+        'the description "description"\n\n';
+      const just_str: string =
+        "Explain why the job is a good fit for the test taker. Respond as if you were speaking " +
+        'to the test taker. Make the JSON key for the explanation "justification"\n\n';
+      const train_str: string =
+        "For each career, what training or education is needed? Please make the JSON key for " +
+        'each explanation "training"\n\n';
+      const org_str: string =
+        "For each career, list a couple of organizations that would hire in that field? Make " +
+        'the JSON key for each explanation "orgs"';
 
-        const thread = await openai.beta.threads.create(undefined);
+      const thread = await openai.beta.threads.create(undefined);
 
-        await openai.beta.threads.messages.create(
-            thread.id,
-            {
-              role: "user",
-              content: "Here is the results of the test\n" + results +
-                  job_str + desc_str + just_str + train_str + org_str
-            }
-        )
+      await openai.beta.threads.messages.create(thread.id, {
+        role: "user",
+        content:
+          "Here is the results of the test\n" +
+          results +
+          job_str +
+          desc_str +
+          just_str +
+          train_str +
+          org_str,
+      });
 
-        let run = await openai.beta.threads.runs.createAndPoll(
-            thread.id,
-            {assistant_id: assistantID, additional_instructions: "do not use line breaks in your response"}
-        )
-        if (run.status === "completed") {
-          await resolveRun(run);
-          setIsLoading(false);
+      let run = await openai.beta.threads.runs.createAndPoll(thread.id, {
+        assistant_id: assistantID,
+        additional_instructions: "do not use line breaks in your response",
+      });
+      if (run.status === "completed") {
+        await resolveRun(run);
+        setIsLoading(false);
 
-          for (let i = 0; i < NUM_JOBS - 1; i++) {
-            await openai.beta.threads.messages.create(
-                thread.id,
-                {
-                  role: "user",
-                  content: "Using the test results from the first message, suggest another career. respond in the same " +
-                      "format as the first message"
-                }
-            )
-            run = await openai.beta.threads.runs.createAndPoll(
-                thread.id,
-                {assistant_id: assistantID, additional_instructions: "do not use line breaks in your response"}
-            )
-            if (run.status === "completed") {await resolveRun(run)}
-            else {
-              console.log(run.status)
-              if (run.status === "failed") {console.log(run.last_error)}
+        for (let i = 0; i < NUM_JOBS - 1; i++) {
+          await openai.beta.threads.messages.create(thread.id, {
+            role: "user",
+            content:
+              "Using the test results from the first message, suggest another career. respond in the same " +
+              "format as the first message",
+          });
+          run = await openai.beta.threads.runs.createAndPoll(thread.id, {
+            assistant_id: assistantID,
+            additional_instructions: "do not use line breaks in your response",
+          });
+          if (run.status === "completed") {
+            await resolveRun(run);
+          } else {
+            console.log(run.status);
+            if (run.status === "failed") {
+              console.log(run.last_error);
             }
           }
         }
-        else {
-          console.log(run.status)
-          if (run.status === "failed") {console.log(run.last_error)}
+      } else {
+        console.log(run.status);
+        if (run.status === "failed") {
+          console.log(run.last_error);
         }
       }
-  genAssistReport()
+    }
+    genAssistReport();
   }, [location.state]);
 
   return (
-    <div className={"placeholder-container"}>
-      <h2>Test Completed!</h2>
-      {isLoading ? <LoadingPage /> : <ResultAccordion GPTReport={report} numEntries={numEntries}/>}
+    <div>
+      <NavB/>
+      <div className={"placeholder-container"}>
+        <h2>Test Completed!</h2>
+        {isLoading ? (
+          <LoadingPage />
+        ) : (
+          <ResultAccordion GPTReport={report} numEntries={numEntries} />
+        )}
+      </div>
     </div>
   );
 }
